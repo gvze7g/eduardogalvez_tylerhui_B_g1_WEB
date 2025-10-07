@@ -30,12 +30,73 @@
                         <th>Genero</th>
                         <th>Año Estreno</th>
                         <th>Duración</th>
-                        <th>Fecha Creacion</th>
+                        <th>Fecha Creación</th>
                     </tr>
                 </thead>
                 <tbody id="tablaPeliculas"></tbody>
             </table>
         </div>
     </div>
+
+    <div class="modal fade" id="modalPelicula">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="modalTitulo">Agregar Pelicula</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formPelicula">
+                        <input type="hidden" id="idPelicula">
+
+                        <div class="mb-3">
+                            <label class="form-label">Titulo*</label>
+                            <input type="text" class="form-control" id="titulo" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Director</label>
+                            <input type="text" class="form-control" id="director">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Genero</label>
+                            <input type="text" class="form-control" id="genero">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Año*</label>
+                                <input type="number" class="form-control" id="anoEstreno" required>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Duración (min)</label>
+                                <input type="number" class="form-control" id="duracionMin">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Fecha Creación</label>
+                                <input type="date" class="form-control" id="fechaCreacion">
+                            </div>
+                        </div>
+
+                        <div class="modal-fade" id="modalEliminar">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header-bg-warning"> 
+                                        <h5 class="modal-title" id="modalTitulo">Eliminación</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </html>
